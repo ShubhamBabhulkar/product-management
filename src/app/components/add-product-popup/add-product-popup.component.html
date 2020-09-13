@@ -21,7 +21,7 @@
                       </mat-error>
                     </mat-error>
                     </mat-form-field>
-                    <mat-form-field>
+                    <mat-form-field class="margin-left-1rem">
                         <mat-label>Product quality</mat-label>
                         <mat-select formControlName="quality">
                           <mat-option *ngFor="let quality of qualityes" [value]="quality">
@@ -34,7 +34,7 @@
 
                         <button class="col-md-3 cursor-pointer margin-top-05rem" mat-dialog-close="Nochanges" mat-raised-button>Cancel</button>
 
-                          <button mat-raised-button  color="primary" class="col-md-8 cursor-pointer margin-top-05rem float-right" [disabled]="!addProductForm.valid" [mat-dialog-close]="f.value" cdkFocusInitial>Update</button>
+                          <button mat-raised-button  color="primary" class="col-md-8 cursor-pointer margin-top-05rem float-right" [disabled]="!addProductForm.valid" [mat-dialog-close]="f.value" cdkFocusInitial>Add</button>
                           </div>
                       </div>
                   </form>
