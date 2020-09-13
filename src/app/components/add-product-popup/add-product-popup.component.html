@@ -1,0 +1,43 @@
+<div class="row justify-content-md-center align-items-center justify-content-center wrapped-card ">
+        <div class="col-md-12">
+            <h4>Add New Product</h4>
+          <mat-card class="padding-2rem ">
+            <form class="example-form" [formGroup]='addProductForm' #f="ngForm">
+                  <mat-form-field class="example-full-width col-md-12">
+                      <input matInput formControlName="name" type="text" placeholder="Product Name" required>
+                      <mat-error *ngIf="getrequired('name').touched && getrequired('name').invalid">
+                      <mat-error *ngIf="getrequired('name').errors.required">Name required
+                      </mat-error>
+                      <mat-error *ngIf="getrequired('name').errors.maxlength">
+                          The text entered exceeds the maximum length of 255 characters
+                      </mat-error>
+                    </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width col-md-12">
+                      <input matInput formControlName="rate" type="text" placeholder="Product rate" required>
+                      <mat-error *ngIf="getrequired('rate').touched && getrequired('rate').invalid">
+                      <mat-error *ngIf="getrequired('rate').errors.required">Product rate required
+                      </mat-error>
+                    </mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Product quality</mat-label>
+                        <mat-select formControlName="quality">
+                          <mat-option *ngFor="let quality of qualityes" [value]="quality">
+                            {{quality}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    <div class="example-button-row">
+                        <div class="col-md-12 example-button-row">
+
+                        <button class="col-md-3 cursor-pointer margin-top-05rem" mat-dialog-close="Nochanges" mat-raised-button>Cancel</button>
+
+                          <button mat-raised-button  color="primary" class="col-md-8 cursor-pointer margin-top-05rem float-right" [disabled]="!addProductForm.valid" [mat-dialog-close]="f.value" cdkFocusInitial>Update</button>
+                          </div>
+                      </div>
+                  </form>
+          </mat-card>
+        </div>
+      </div>
