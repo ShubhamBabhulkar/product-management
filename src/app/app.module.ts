@@ -10,8 +10,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductDashboarComponent } from './components/product-dashboar/product-dashboar.component';
-import { SigninComponent } from './components/signin/signin.component';
-import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { InfoTableComponent } from './components/info-table/info-table.component';
 import {MatDialogModule} from '@angular/material/dialog';
 @NgModule({
@@ -19,8 +17,6 @@ import {MatDialogModule} from '@angular/material/dialog';
     AppComponent,
     TopBarComponent,
     ProductDashboarComponent,
-    SigninComponent,
-    SideNavComponent,
     InfoTableComponent,
     AddProductPopupComponent
   ],
